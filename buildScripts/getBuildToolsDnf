@@ -2,9 +2,9 @@
 
 # This shell script automates getting the required build tools (dnf install)
 
-# set the shell environment variable 'UNATTENDED' to 
-# '--setopt=install_weak_deps=False' for unattended use (for example in 
-# the .travis.yml script) 
+# set the shell environment variable 'UNATTENDED' to
+# '--setopt=install_weak_deps=False' for unattended use (for example in
+# the .travis.yml script)
 
 echo ""
 echo "-------------------------------------------------------------------"
@@ -15,8 +15,7 @@ echo ""
 
 set -ev
 
-sudo dnf $UNATTENDED install  \
-  sudo                        \
+dnf $UNATTENDED install       \
   wget                        \
   git                         \
   pkg-config                  \
@@ -32,4 +31,3 @@ sudo dnf $UNATTENDED install  \
   gettext                     \
   java-1.8.0-openjdk-headless \
   jq
-

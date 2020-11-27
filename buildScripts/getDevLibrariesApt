@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# This shell script automates getting the development libraries required to 
+# This shell script automates getting the development libraries required to
 # build poppler and fontforge
 
 # set the shell environment variable 'UNATTENDED' to '--assume-yes' for
@@ -15,8 +15,8 @@ echo ""
 
 set -ev
 
-sudo apt-get update
-sudo apt-get $UNATTENDED install \
+apt-get update
+apt-get $UNATTENDED install      \
   libcairo-dev                   \
   libpng-dev                     \
   libjpeg-dev                    \

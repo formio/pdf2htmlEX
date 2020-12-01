@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/bin/sh
 
 # This shell script creates an AppImage for pdf2htmlEX
 
@@ -24,7 +24,7 @@ mkdir -p imageBuild/appDir/usr/lib/
 
 cd pdf2htmlEX/build
 
-sudo rm -rf install_manifest.txt
+rm -rf install_manifest.txt
 
 make install DESTDIR=../../imageBuild/appDir
 
@@ -45,9 +45,9 @@ cd ../imageBuild
 #
 #find appDir -type f -exec chmod 644 {} \;
 
-# force libfontconfig into AppImage (linuxdeploy blacklists libfontconfig) 
-# (turned off since libfontconfig needs to be matched to the underlying 
-#  OS's collection of fonts and /etc/fonts configuration files) 
+# force libfontconfig into AppImage (linuxdeploy blacklists libfontconfig)
+# (turned off since libfontconfig needs to be matched to the underlying
+#  OS's collection of fonts and /etc/fonts configuration files)
 #
 #cp /usr/lib/x86_64-linux-gnu/libfontconfig.so.1 appDir/usr/lib/
 
@@ -60,7 +60,7 @@ chmod a+x $LINUX_DEPLOY_APP_IMAGE
 if [ ! -w /dev/fuse ] ; then
   # We are in an environment in which FUSE is not useable...
   #
-  # We explicilty extract the appimage to a squashfs to allow it to be used 
+  # We explicilty extract the appimage to a squashfs to allow it to be used
   # even if FUSE is not available.
   #
   ./$LINUX_DEPLOY_APP_IMAGE --appimage-extract
@@ -77,5 +77,3 @@ export OUTPUT=$APPIMAGE_NAME
   -i ../pdf2htmlEX/logo/pdf2htmlEX.svg			\
   --appdir=appDir								\
   --output appimage
-
-

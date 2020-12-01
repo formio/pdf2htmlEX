@@ -1,4 +1,4 @@
-#!/bin/sh 
+#!/bin/sh
 
 # This shell script creates a (binary) Debian Package Archive for pdf2htmlEX
 
@@ -23,7 +23,7 @@ echo "export DPKG_NAME=\"$DPKG_NAME\"" >> buildScripts/reSourceVersionEnvs
 DEBDIR=imageBuild/debianDir
 DOCDIR=$DEBDIR/usr/local/share/doc/pdf2htmlEX
 
-sudo rm -rf $DEBDIR
+rm -rf $DEBDIR
 mkdir -p $DOCDIR
 
 # Install pdf2htmlEX
@@ -47,7 +47,7 @@ cd ..
 #
 git log --format="%cd %h %d %n    %s%n" --date=short > $DOCDIR/gitLog
 
-# Ensure the license and readme details are embedded in the debian archive 
+# Ensure the license and readme details are embedded in the debian archive
 #
 cp LICENSE       $DOCDIR
 cp LICENSE_GPLv3 $DOCDIR
@@ -105,7 +105,7 @@ cd imageBuild
 #
 # Make sure root:root owns all files
 #
-sudo chown -R root:root debianDir
+chown -R root:root debianDir
 #
 # Build the package
 #

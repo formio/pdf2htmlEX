@@ -1,6 +1,6 @@
-#!/bin/sh 
+#!/bin/sh
 
-# This shell script creates a tar file which can use used to create an OCI 
+# This shell script creates a tar file which can use used to create an OCI
 # container from an existing pdf2htmlEX.
 #
 # This is the part which can run *inside* an OCI container.
@@ -27,7 +27,7 @@ mkdir -p imageBuild/alpineTarDir
 
 cd pdf2htmlEX/build
 
-sudo rm -rf install_manifest.txt
+rm -rf install_manifest.txt
 
 make install DESTDIR=../../imageBuild/alpineTarDir
 
@@ -47,13 +47,13 @@ cd ..
 cat <<ALPINE_INSTALL > $ALPINE_NAME.install
 #!/bin/sh
 
-# This (alpine) shell script installs a locally existing tar.gz file of 
-# the pdf2htmlEX binaries compiled on Alpine $DIST. 
+# This (alpine) shell script installs a locally existing tar.gz file of
+# the pdf2htmlEX binaries compiled on Alpine $DIST.
 #
 # You MUST have root/sudo privileges to run this file.
 #
 
-# We start by installing all of the (known) required runtime dependencies 
+# We start by installing all of the (known) required runtime dependencies
 #
 apk update
 #
@@ -71,8 +71,8 @@ apk add --no-cache \
   libjpeg-turbo    \
   libxml2
 
-# Now we install the (Alpine $DIST) compiled pdf2htmlEX binaries and 
-# configuration files. 
+# Now we install the (Alpine $DIST) compiled pdf2htmlEX binaries and
+# configuration files.
 #
 tar xvf $ALPINE_NAME.tar.gz -C /
 

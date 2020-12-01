@@ -1,6 +1,6 @@
 #!/bin/sh
 
-# This shell script automates getting the development libraries required to 
+# This shell script automates getting the development libraries required to
 # build poppler and fontforge
 
 # set the shell environment variable 'UNATTENDED' to '--assume-yes' for
@@ -14,8 +14,8 @@ echo ""
 
 set -ev
 
-sudo apk update
-sudo apk add        \
+apk update
+apk add             \
   gettext           \
   gnu-libiconv-dev  \
   cairo-dev         \

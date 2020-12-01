@@ -34,7 +34,7 @@ cmake                                       \
   -DENABLE_ZLIB=ON                          \
   -DENABLE_ZLIB_UNCOMPRESS=OFF              \
   -DUSE_FLOAT=OFF                           \
-  -DBUILD_SHARED_LIBS=OFF                   \
+  -DBUILD_SHARED_LIBS=ON                   \
   -DRUN_GPERF_IF_PRESENT=OFF                \
   -DEXTRA_WARN=OFF                          \
   -DWITH_JPEG=ON                            \

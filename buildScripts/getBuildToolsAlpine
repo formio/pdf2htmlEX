@@ -18,7 +18,7 @@ apk add        \
   tar          \
   wget         \
   git          \
-  pkgconfig    \
+  pkgconf      \
   ruby         \
   cmake        \
   make         \

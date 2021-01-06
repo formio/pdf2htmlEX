@@ -2,16 +2,11 @@
 
 # This shell script automates deletes all installed libs
 
-# set the shell environment variable 'UNATTENDED' to '--assume-yes' for
-# unattended use (for example in the .travis.yml script)
-
 echo ""
 echo "-------------------------------------------------------------------"
 echo "DELETING Build Tools (using APK / Alpine)"
 echo "-------------------------------------------------------------------"
 echo ""
-
-set -ev
 
 apk del        \
   tar          \

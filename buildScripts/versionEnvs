@@ -8,7 +8,7 @@
 
 export PDF2HTMLEX_VERSION=0.18.8.rc2
 
-export POPPLER_VERSION=poppler-0.89.0
+export POPPLER_VERSION=poppler-21.01.0
 #export POPPLER_VERSION=poppler-0.88.0
 #export POPPLER_VERSION=poppler-0.87.0
 #export POPPLER_VERSION=poppler-0.86.1
@@ -50,7 +50,7 @@ if [ -z "$PDF2HTMLEX_BRANCH" ]; then
     echo ""
     read -p "Enter the pdf2htmlEX branch or version: " PDF2HTMLEX_BRANCH
     echo ""
-    if [ -z "$PDF2HTMLEX_BRANCH" ]; then 
+    if [ -z "$PDF2HTMLEX_BRANCH" ]; then
       echo "PDF2HTMLEX_BRANCH not set... so we can not build anything."
       exit 1
     fi

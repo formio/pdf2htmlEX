@@ -30,3 +30,24 @@ cd ../../poppler-data
 make install                                  \
   prefix=$PDF2HTMLEX_PREFIX                   \
   datadir=$PDF2HTMLEX_PREFIX/share/pdf2htmlEX
+
+echo ""
+echo "-------------------------------------------------------------------"
+echo "DELETING Build Tools (using APK / Alpine)"
+echo "-------------------------------------------------------------------"
+echo ""
+
+apk del        \
+  tar          \
+  wget         \
+  git          \
+  pkgconf      \
+  ruby         \
+  cmake        \
+  make         \
+  gcc          \
+  g++          \
+  gettext      \
+  openjdk8     \
+  jq           \
+  sqlite

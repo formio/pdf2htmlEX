@@ -47,3 +47,5 @@ set -ev
 ./buildScripts/buildPdf2htmlEX
 
 ./buildScripts/installPdf2htmlEX
+
+./buildScripts/deleteBuildingLibs

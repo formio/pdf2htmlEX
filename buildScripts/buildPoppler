@@ -17,6 +17,7 @@ cmake                                       \
   -DCMAKE_BUILD_TYPE=Release                \
   -DCMAKE_INSTALL_PREFIX=$PDF2HTMLEX_PREFIX \
   -DENABLE_UNSTABLE_API_ABI_HEADERS=OFF     \
+  -DFREETYPE_LIBRARY=/usr/lib/libfreetype.so \
   -DBUILD_GTK_TESTS=OFF                     \
   -DBUILD_QT5_TESTS=OFF                     \
   -DBUILD_CPP_TESTS=OFF                     \

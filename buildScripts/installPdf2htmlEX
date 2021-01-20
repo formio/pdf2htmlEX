@@ -50,4 +50,5 @@ apk del        \
   gettext      \
   openjdk8     \
   jq           \
-  sqlite
+  sqlite       \
+  cairo-dev    

@@ -19,7 +19,6 @@ apk add        \
   wget         \
   git          \
   pkgconfig    \
-  pkgconf      \
   ruby         \
   cmake~=3.17 --repository=http://dl-cdn.alpinelinux.org/alpine/v3.12/main  \
   make         \
